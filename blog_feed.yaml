@@ -1,0 +1,28 @@
+name: Blog Feed Buttons
+description: Blog Feed Buttons Particle for Grav Feed Plugin
+type: particle
+icon: fa-rss
+
+dependencies:
+  platform:
+    grav:
+      plugin:
+        feed: true
+
+form:
+  fields:
+    enabled:
+      type: checkbox
+      label: Enabled
+      description: Globally enable blog feed particles.
+      default: true
+
+    blog_root:
+      type: input.text
+      size: medium
+      label: Blog Root
+      default: 'blog'
+      help: Enter the blog page for the site.
+      description: Enter the blog page for the site.
+      validate:
+          type: text

@@ -1,7 +1,7 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% block particle %}
-{% if config.plugins.simplesearch.enabled and (particle.blog_root in page.route or page.slug == particle.blog_root) %}
+{% if config.plugins.feed.enabled and (particle.blog_root in page.route or page.slug == particle.blog_root) %}
     <a class="button" href="{{ base_url_relative ~ "/" ~ particle.blog_root }}.atom"><i class="fa fa-rss-square" aria-hidden="true"></i> Atom 1.0</a>
     <a class="button" href="{{ base_url_relative ~ "/" ~ particle.blog_root }}.rss"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
     {% endif %}
